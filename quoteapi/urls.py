@@ -18,11 +18,10 @@ from django.urls import path, include
 from rest_framework import routers
 from quotes import views
 
-router = routers.DefaultRouter()
-router.register(r'quotes', views.QuoteViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/', include(router.urls)),
-    # path('api-auth', include('rest_framework.urls', namespace = 'rest_framework'))
+    path('api/v1/quotes', views.QuoteListView.as_view(), name = 'quotes'),
+    path('api/v1/quote/<pk>', views.QuoteDetailView.as_view(), name = 'quote')
+    # path('api-auth', include('rest_framework.urls', namespace = 'rest_framework')),
 ]
