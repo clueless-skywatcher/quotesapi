@@ -5,6 +5,6 @@ from rest_framework.viewsets import ModelViewSet
 
 # Create your views here.
 class QuoteViewSet(ModelViewSet):
-    queryset = Quote.objects.all().order_by('name')
+    queryset = Quote.objects.all().order_by('quote')
     serializer_class = QuoteSerializer
     permission_classes = [IsAuthenticated]
