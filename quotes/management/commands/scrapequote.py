@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 import requests
 import random
 
-class ScrapeQuoteCommand(BaseCommand):
+class Command(BaseCommand):
     help = 'Scrapes n quotes from Goodreads and saves them to the database'
 
     def add_arguments(self, parser) -> None:
