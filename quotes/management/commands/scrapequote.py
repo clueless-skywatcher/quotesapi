@@ -6,7 +6,7 @@ import requests
 import random
 
 class Command(BaseCommand):
-    help = 'Scrapes n quotes from Goodreads and saves them to the database'
+    help = 'Scrapes n quotes from Goodreads by category and saves them to the database'
 
     def add_arguments(self, parser) -> None:
         parser.add_argument('category', type = str)
